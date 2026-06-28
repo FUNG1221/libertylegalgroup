@@ -885,6 +885,40 @@
       display: block;
     }
 
+
+    .privacy-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 2px 0 18px;
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .privacy-consent input {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      margin: 3px 0 0;
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+
+    .privacy-consent label {
+      cursor: pointer;
+    }
+
+    .privacy-consent a {
+      color: var(--navy);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .privacy-consent a:hover {
+      color: var(--gold);
+    }
+
     textarea {
       min-height: 130px;
       resize: vertical;
@@ -1870,6 +1904,14 @@
               <textarea id="message" placeholder="Briefly describe your legal matter" required></textarea>
               <div class="error-message">Please describe your legal matter</div>
             </div>
+
+            <div class="form-group">
+              <div class="privacy-consent">
+                <input type="checkbox" id="privacyPolicy" required>
+                <label for="privacyPolicy">I agree to the <a href="#" target="_blank" rel="noopener">Privacy Policy</a> as outlined on the website.</label>
+              </div>
+              <div class="error-message">Please agree to the Privacy Policy before submitting</div>
+            </div>
             
             <button type="submit" class="btn btn-gold">Submit Request <i class="fa-solid fa-paper-plane"></i></button>
           </form>
@@ -2137,7 +2179,8 @@
       email: document.getElementById('email'),
       phone: document.getElementById('phone'),
       practiceArea: document.getElementById('practiceArea'),
-      message: document.getElementById('message')
+      message: document.getElementById('message'),
+      privacyPolicy: document.getElementById('privacyPolicy')
     };
 
     function validateEmail(email) {
@@ -2199,6 +2242,12 @@
       // Validate Message
       if (!formInputs.message.value.trim()) {
         showError('message');
+        isValid = false;
+      }
+
+      // Validate Privacy Policy Agreement
+      if (!formInputs.privacyPolicy.checked) {
+        showError('privacyPolicy');
         isValid = false;
       }
 
