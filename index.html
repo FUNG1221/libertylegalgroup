@@ -1358,7 +1358,25 @@
       }
     }
 
-    @media (max-width: 768px) {
+    
+@media (max-width: 768px) {
+      .navbar{
+        justify-content:center;
+        position:relative;
+        height:96px;
+      }
+      .logo{
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+        text-align:center;
+        white-space:nowrap;
+      }
+      .menu-toggle{
+        position:absolute;
+        right:20px;
+      }
+
       .navbar{
         height:96px;
         padding-top:12px;
@@ -1517,6 +1535,208 @@
         width: auto;
       }
     }
+  
+    /* Premium Mobile: make each main content block fit better on one screen */
+    @media (max-width: 768px) {
+      section{
+        scroll-margin-top: 170px;
+      }
+
+      .section{
+        padding: 34px 0;
+      }
+
+      .section-title{
+        margin-bottom: 28px;
+      }
+
+      .section-title span{
+        font-size: 12px;
+        letter-spacing: 3px;
+      }
+
+      .section-title h2{
+        font-size: clamp(30px, 8vw, 40px);
+        line-height: 1.08;
+        margin-top: 8px;
+      }
+
+      .section-title p{
+        font-size: 15px;
+        line-height: 1.55;
+        margin-top: 12px;
+      }
+
+      .practice-grid,
+      .choose-grid,
+      .results-grid,
+      .testimonial-grid,
+      .attorney-grid{
+        gap: 18px;
+      }
+
+      .practice-card,
+      .choose-card,
+      .result-card,
+      .testimonial-card{
+        min-height: calc(100vh - 255px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 34px 24px;
+      }
+
+      .practice-card .icon-box{
+        width: 70px;
+        height: 70px;
+        font-size: 26px;
+        margin-bottom: 26px;
+      }
+
+      .practice-card h3,
+      .result-card h3,
+      .choose-card h3{
+        font-size: 28px;
+        line-height: 1.18;
+      }
+
+      .practice-card p,
+      .result-card p,
+      .choose-card p{
+        font-size: 19px;
+        line-height: 1.55;
+        margin-bottom: 24px;
+      }
+
+      .learn-link{
+        font-size: 19px;
+      }
+
+      .choose-card .number,
+      .result-amount{
+        font-size: 46px;
+        margin-bottom: 18px;
+      }
+
+      .testimonial-card{
+        min-height: calc(100vh - 300px);
+      }
+
+      .testimonial-card p{
+        font-size: 19px;
+        line-height: 1.65;
+      }
+
+      .stars{
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .client{
+        font-size: 18px;
+      }
+
+      .attorney-card{
+        min-height: calc(100vh - 255px);
+      }
+
+      .attorney-card img{
+        height: 52vh;
+        object-fit: cover;
+      }
+
+      .attorney-info{
+        padding: 22px 24px;
+      }
+
+      .attorney-info h3{
+        font-size: 25px;
+      }
+
+      .attorney-info p{
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .hero{
+        min-height: auto;
+        padding-top: 175px;
+        padding-bottom: 38px;
+      }
+
+      .hero h1{
+        font-size: clamp(40px, 11vw, 52px);
+        line-height: .98;
+        margin-bottom: 18px;
+      }
+
+      .hero p{
+        font-size: 17px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+      }
+
+      .hero-actions{
+        gap: 14px;
+      }
+
+      .hero-stats{
+        margin-top: 28px;
+        gap: 14px;
+      }
+
+      .hero-stat{
+        min-height: 120px;
+        padding: 18px 20px;
+      }
+
+      .trust-badges{
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section{
+        padding: 30px 0;
+      }
+
+      .section-title{
+        margin-bottom: 24px;
+      }
+
+      .section-title h2{
+        font-size: clamp(28px, 9vw, 38px);
+      }
+
+      .practice-card,
+      .choose-card,
+      .result-card,
+      .testimonial-card{
+        min-height: calc(100vh - 250px);
+        padding: 30px 22px;
+      }
+
+      .attorney-card{
+        min-height: calc(100vh - 250px);
+      }
+
+      .attorney-card img{
+        height: 50vh;
+      }
+
+      .practice-card p,
+      .result-card p,
+      .choose-card p,
+      .testimonial-card p{
+        font-size: 18px;
+      }
+
+      .choose-card .number,
+      .result-amount{
+        font-size: 42px;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
