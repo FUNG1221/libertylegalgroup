@@ -1507,6 +1507,394 @@
         width: auto;
       }
     }
+  
+    /* ========================= */
+    /* Final Mobile Optimization */
+    /* ========================= */
+    @media (max-width: 768px) {
+      /* Mobile header: centered logo, comfortable spacing */
+      .emergency-banner {
+        padding: 12px 0;
+      }
+
+      .emergency-banner-content {
+        justify-content: flex-start;
+        gap: 12px;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      header {
+        top: 72px;
+      }
+
+      .navbar {
+        height: 90px;
+        justify-content: center;
+        position: relative;
+        padding: 10px 0;
+      }
+
+      .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        text-align: center;
+        font-size: 19px;
+        gap: 10px;
+      }
+
+      .logo i {
+        font-size: 28px;
+      }
+
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+      }
+
+      .nav-links {
+        top: 90px;
+      }
+
+      /* Hero: make the full mobile hero fit much better in one screen */
+      .hero {
+        min-height: calc(100vh - 162px);
+        padding-top: 165px;
+        padding-bottom: 18px;
+        align-items: flex-start;
+      }
+
+      .hero .container {
+        width: min(92%, 680px);
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-badge {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: clamp(30px, 8.5vw, 42px);
+        line-height: .98;
+        margin-bottom: 12px;
+      }
+
+      .hero p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 14px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+      }
+
+      .hero-stats {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        max-width: 100%;
+      }
+
+      .hero-stat {
+        min-height: auto;
+        padding: 12px 6px;
+        text-align: center;
+        border-radius: 14px;
+      }
+
+      .hero-stat strong {
+        font-size: 20px;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      .hero-stat span {
+        font-size: 10px;
+        line-height: 1.2;
+      }
+
+      .trust-badges {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7px;
+      }
+
+      .trust-badge {
+        padding: 8px 4px;
+        justify-content: center;
+        text-align: center;
+        font-size: 9.5px;
+        line-height: 1.15;
+        border-radius: 12px;
+        gap: 4px;
+      }
+
+      .trust-badge i {
+        font-size: 11px;
+      }
+
+      /* Main mobile sections: reduce extra scrolling and make cards fit better */
+      .section {
+        padding: 34px 0;
+      }
+
+      .section-title {
+        margin-bottom: 26px;
+      }
+
+      .section-title span {
+        font-size: 12px;
+        letter-spacing: 3px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(29px, 8vw, 39px);
+        line-height: 1.08;
+        margin-top: 8px;
+      }
+
+      .section-title p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-top: 12px;
+      }
+
+      .practice-grid,
+      .choose-grid,
+      .results-grid,
+      .testimonial-grid,
+      .attorney-grid {
+        gap: 18px;
+      }
+
+      .practice-card,
+      .choose-card,
+      .result-card,
+      .testimonial-card {
+        min-height: auto;
+        padding: 30px 22px;
+      }
+
+      .practice-card .icon-box {
+        width: 64px;
+        height: 64px;
+        font-size: 24px;
+        margin-bottom: 22px;
+      }
+
+      .practice-card h3,
+      .result-card h3,
+      .choose-card h3 {
+        font-size: 26px;
+        line-height: 1.18;
+      }
+
+      .practice-card p,
+      .result-card p,
+      .choose-card p {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .learn-link {
+        font-size: 18px;
+      }
+
+      .choose-card {
+        text-align: center;
+      }
+
+      .choose-card .number,
+      .result-amount {
+        font-size: 40px;
+        margin-bottom: 14px;
+      }
+
+      .testimonial-card p {
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      .stars {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      .client {
+        font-size: 17px;
+      }
+
+      .attorney-card img {
+        height: 48vh;
+        object-fit: cover;
+      }
+
+      .attorney-info {
+        padding: 22px;
+      }
+
+      .attorney-info h3 {
+        font-size: 24px;
+      }
+
+      .attorney-info p {
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .sticky-call {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+        left: 18px;
+        bottom: 18px;
+      }
+
+      .back-top {
+        width: 44px;
+        height: 44px;
+        right: 18px;
+        bottom: 78px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      header {
+        top: 72px;
+      }
+
+      .navbar {
+        height: 86px;
+      }
+
+      .logo {
+        font-size: 17px;
+        max-width: calc(100% - 120px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .logo i {
+        font-size: 27px;
+      }
+
+      .nav-links {
+        top: 86px;
+      }
+
+      .hero {
+        min-height: calc(100vh - 158px);
+        padding-top: 158px;
+        padding-bottom: 12px;
+      }
+
+      .hero h1 {
+        font-size: clamp(27px, 8vw, 34px);
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 13px;
+        line-height: 1.35;
+        margin-bottom: 12px;
+      }
+
+      .hero-actions .btn {
+        padding: 11px 14px;
+        font-size: 13px;
+      }
+
+      .hero-stats {
+        margin-top: 12px;
+        gap: 7px;
+      }
+
+      .hero-stat {
+        padding: 10px 4px;
+      }
+
+      .hero-stat strong {
+        font-size: 18px;
+      }
+
+      .hero-stat span {
+        font-size: 9px;
+      }
+
+      .trust-badges {
+        margin-top: 8px;
+        gap: 6px;
+      }
+
+      .trust-badge {
+        font-size: 8.5px;
+        padding: 7px 3px;
+      }
+
+      .section {
+        padding: 30px 0;
+      }
+
+      .section-title {
+        margin-bottom: 22px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(27px, 8.5vw, 36px);
+      }
+
+      .practice-card,
+      .choose-card,
+      .result-card,
+      .testimonial-card,
+      .contact-info,
+      .contact-form {
+        padding: 24px 20px;
+      }
+
+      .practice-card h3,
+      .result-card h3,
+      .choose-card h3 {
+        font-size: 24px;
+      }
+
+      .practice-card p,
+      .result-card p,
+      .choose-card p,
+      .testimonial-card p {
+        font-size: 16px;
+      }
+
+      .choose-card .number,
+      .result-amount {
+        font-size: 36px;
+      }
+
+      .attorney-card img {
+        height: 44vh;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
