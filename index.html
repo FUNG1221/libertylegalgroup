@@ -2903,32 +2903,22 @@
   }
 }
 
+  
+    /* ===== FINAL MOBILE FIX: Hamburger changes to X when menu opens ===== */
+    @media (max-width:768px){
+      .menu-toggle i{
+        font-family:"Font Awesome 6 Free" !important;
+        font-weight:900 !important;
+      }
 
-    /* ===== FINAL FIX: Mobile menu icon always stays hamburger ===== */
-    .menu-toggle,
-    .menu-toggle.active{
-      transform:none !important;
-      rotate:0deg !important;
-    }
+      .menu-toggle i::before{
+        content:"\f0c9" !important; /* bars */
+      }
 
-    .menu-toggle i,
-    .menu-toggle.active i{
-      transform:none !important;
-      rotate:0deg !important;
-    }
-
-    .menu-toggle i::before,
-    .menu-toggle.active i::before,
-    .menu-toggle .fa-xmark::before,
-    .menu-toggle .fa-times::before{
-      content:"\f0c9" !important;
-      font-family:"Font Awesome 6 Free" !important;
-      font-weight:900 !important;
-    }
-
-    .menu-toggle .fa-xmark,
-    .menu-toggle .fa-times{
-      font-family:"Font Awesome 6 Free" !important;
+      .nav-links.active ~ .menu-toggle i::before,
+      .menu-toggle.menu-open i::before{
+        content:"\f00d" !important; /* X */
+      }
     }
 
   </style>
@@ -3705,25 +3695,35 @@
     }
   </script>
 
+
   <script>
-    /* FINAL FIX: Keep mobile menu button as hamburger icon, never X */
+    /* FINAL MOBILE FIX: Hamburger becomes X when mobile menu is open */
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.querySelector(".menu-toggle");
-      if (!menuToggle) return;
+      const navLinks = document.querySelector(".nav-links");
 
-      function keepHamburgerIcon() {
-        const icon = menuToggle.querySelector("i");
-        if (!icon) return;
-        icon.classList.remove("fa-xmark", "fa-times");
-        icon.classList.add("fa-bars");
-        menuToggle.classList.remove("active");
+      if (!menuToggle || !navLinks) return;
+
+      function syncMobileMenuIcon() {
+        if (window.innerWidth <= 768 && navLinks.classList.contains("active")) {
+          menuToggle.classList.add("menu-open");
+        } else {
+          menuToggle.classList.remove("menu-open");
+        }
       }
 
-      keepHamburgerIcon();
       menuToggle.addEventListener("click", function () {
-        setTimeout(keepHamburgerIcon, 0);
-        setTimeout(keepHamburgerIcon, 50);
+        setTimeout(syncMobileMenuIcon, 0);
       });
+
+      navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          menuToggle.classList.remove("menu-open");
+        });
+      });
+
+      window.addEventListener("resize", syncMobileMenuIcon);
+      syncMobileMenuIcon();
     });
   </script>
 
