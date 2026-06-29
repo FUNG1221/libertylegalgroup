@@ -3455,6 +3455,11 @@
       });
     });
 
+    
+    // Keep hamburger icon on mobile
+    const menuIcon=document.querySelector(".menu-toggle i");
+    if(menuIcon){menuIcon.className="fa-solid fa-bars";}
+
     // Reveal on Scroll
     const revealElements = document.querySelectorAll(".reveal");
 
