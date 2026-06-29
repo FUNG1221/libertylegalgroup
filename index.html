@@ -2340,6 +2340,34 @@
       }
     }
 .privacy-consent{
+        display:flex !important;
+        align-items:flex-start !important;
+        gap:8px !important;
+        font-size:13px !important;
+        line-height:1.35 !important;
+        margin:4px 0 16px !important;
+      }
+
+      .privacy-consent input{
+        width:14px !important;
+        height:14px !important;
+        min-width:14px !important;
+        margin-top:3px !important;
+      }
+
+      .privacy-consent label{
+        font-size:13px !important;
+        line-height:1.35 !important;
+      }
+    }
+
+    @media (max-width:430px){
+      .contact-form h3{
+        font-size:30px !important;
+        letter-spacing:-0.5px !important;
+      }
+
+      .privacy-consent{
         gap:7px !important;
         font-size:12.5px !important;
       }
@@ -2356,33 +2384,39 @@
     }
 
   
-    /* ===== Final Mobile Contact Form Design Fix ===== */
+    /* ===== FINAL OVERRIDE: Mobile Contact Form Like Screenshot ===== */
     @media (max-width:768px){
-      .contact-form{
-        padding:34px 30px 36px !important;
+      #contact .contact-form{
+        padding:34px 28px 36px !important;
         border-radius:28px !important;
       }
 
+      #contact .contact-form h3,
       .contact-form h3{
-        font-size:clamp(28px, 7.2vw, 38px) !important;
+        display:block !important;
+        width:100% !important;
+        max-width:100% !important;
+        font-family:"Cinzel", serif !important;
+        font-size:clamp(27px, 6.7vw, 36px) !important;
         line-height:1.05 !important;
         white-space:nowrap !important;
         text-align:center !important;
-        margin:0 0 28px !important;
-        letter-spacing:-0.4px !important;
+        margin:0 0 34px !important;
+        letter-spacing:-0.8px !important;
         position:relative !important;
       }
 
+      #contact .contact-form h3::after,
       .contact-form h3::after{
         content:"" !important;
         display:block !important;
         width:150px !important;
         height:1px !important;
-        background:linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--gold) 80%, transparent 100%) !important;
+        background:linear-gradient(90deg, transparent 0%, var(--gold) 22%, var(--gold) 78%, transparent 100%) !important;
         margin:18px auto 0 !important;
-        box-shadow:0 0 0 4px transparent !important;
       }
 
+      #contact .contact-form h3::before,
       .contact-form h3::before{
         content:"" !important;
         position:absolute !important;
@@ -2396,21 +2430,31 @@
         z-index:2 !important;
       }
 
-      .contact-form form input,
-      .contact-form form select{
-        min-height:54px !important;
-        border-radius:14px !important;
+      #contact .contact-form input,
+      #contact .contact-form select,
+      #contact .contact-form textarea,
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea{
         font-size:15px !important;
+        border-radius:14px !important;
+      }
+
+      #contact .contact-form input,
+      #contact .contact-form select,
+      .contact-form input,
+      .contact-form select{
+        min-height:54px !important;
         margin-bottom:14px !important;
       }
 
-      .contact-form form textarea{
+      #contact .contact-form textarea,
+      .contact-form textarea{
         min-height:138px !important;
-        border-radius:14px !important;
-        font-size:15px !important;
         margin-bottom:18px !important;
       }
 
+      #contact .privacy-consent,
       .privacy-consent{
         display:flex !important;
         align-items:flex-start !important;
@@ -2421,24 +2465,43 @@
         color:var(--text-light) !important;
       }
 
-      .privacy-consent input{
+      #contact .privacy-consent input[type="checkbox"],
+      .privacy-consent input[type="checkbox"]{
+        appearance:none !important;
+        -webkit-appearance:none !important;
         width:16px !important;
         height:16px !important;
         min-width:16px !important;
-        margin:2px 0 0 !important;
         flex:0 0 16px !important;
+        margin:3px 0 0 !important;
+        border:1.5px solid #98a2b3 !important;
+        border-radius:5px !important;
+        background:#fff !important;
+        padding:0 !important;
       }
 
+      #contact .privacy-consent input[type="checkbox"]:checked,
+      .privacy-consent input[type="checkbox"]:checked{
+        background:var(--gold) !important;
+        border-color:var(--gold) !important;
+      }
+
+      #contact .privacy-consent label,
       .privacy-consent label{
         font-size:13px !important;
         line-height:1.4 !important;
       }
 
-      .contact-form .btn,
-      .contact-form button[type="submit"]{
+      #contact .contact-form button[type="submit"],
+      #contact .contact-form .btn,
+      .contact-form button[type="submit"],
+      .contact-form .btn{
         width:100% !important;
         min-height:58px !important;
+        display:flex !important;
+        align-items:center !important;
         justify-content:center !important;
+        text-align:center !important;
         text-transform:uppercase !important;
         letter-spacing:.4px !important;
         font-size:15px !important;
@@ -2446,35 +2509,30 @@
     }
 
     @media (max-width:430px){
+      #contact .contact-form,
       .contact-form{
         padding:32px 24px 34px !important;
       }
 
+      #contact .contact-form h3,
       .contact-form h3{
-        font-size:clamp(26px, 7.4vw, 32px) !important;
+        font-size:clamp(25px, 7vw, 32px) !important;
       }
 
+      #contact .contact-form h3::after,
       .contact-form h3::after{
         width:130px !important;
-        margin-top:16px !important;
       }
 
-      .contact-form h3::before{
-        bottom:-20px !important;
-        width:7px !important;
-        height:7px !important;
-      }
-
-      .privacy-consent{
-        gap:9px !important;
-        font-size:12.5px !important;
-      }
-
+      #contact .privacy-consent,
+      #contact .privacy-consent label,
+      .privacy-consent,
       .privacy-consent label{
         font-size:12.5px !important;
       }
 
-      .privacy-consent input{
+      #contact .privacy-consent input[type="checkbox"],
+      .privacy-consent input[type="checkbox"]{
         width:15px !important;
         height:15px !important;
         min-width:15px !important;
@@ -2483,13 +2541,9 @@
     }
 
     @media (max-width:380px){
+      #contact .contact-form h3,
       .contact-form h3{
-        font-size:25px !important;
-      }
-
-      .privacy-consent,
-      .privacy-consent label{
-        font-size:12px !important;
+        font-size:24px !important;
       }
     }
 
