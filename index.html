@@ -2873,7 +2873,37 @@
       }
     }
 
-  </style>
+  
+/* ===== Move mobile logo to left ===== */
+@media (max-width:768px){
+  .navbar{
+    justify-content:flex-start !important;
+    padding-left:22px !important;
+    padding-right:86px !important;
+  }
+  .logo{
+    position:static !important;
+    transform:none !important;
+    justify-content:flex-start !important;
+    margin-right:auto !important;
+    margin-left:0 !important;
+    max-width:none !important;
+  }
+  .menu-toggle{
+    position:absolute !important;
+    right:22px !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+  }
+}
+@media (max-width:430px){
+  .navbar{
+    padding-left:18px !important;
+    padding-right:80px !important;
+  }
+}
+
+</style>
 
   <script type="application/ld+json">
   {
