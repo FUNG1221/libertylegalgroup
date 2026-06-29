@@ -2245,6 +2245,54 @@
       }
     }
 
+  
+    /* ========================= */
+    /* Final Fix: Attorney Modal Image */
+    /* ========================= */
+    @media (max-width: 768px) {
+      .modal.show {
+        align-items: flex-start !important;
+        padding: 18px 0 !important;
+      }
+
+      .modal-content {
+        width: 94% !important;
+        max-height: 92vh !important;
+        overflow-y: auto !important;
+        border-radius: 24px !important;
+      }
+
+      .modal-header {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        background: #f4f6f8 !important;
+      }
+
+      .modal-header img,
+      #modalImage {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: 46vh !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+        background: #f4f6f8 !important;
+      }
+
+      .modal-body {
+        padding: 24px !important;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .modal-header img,
+      #modalImage {
+        max-height: 42vh !important;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -2764,7 +2812,7 @@
         position: "Criminal Defense Attorney",
         experience: "18 years",
         education: "Fordham University School of Law",
-        image: "https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?auto=format&fit=crop&w=900&q=80",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
         description: "Michael brings courtroom strength, strategic defense planning, and dedicated representation to clients facing criminal charges. He has an impressive track record of achieving favorable outcomes in both state and federal cases.",
         specialties: [
           "Criminal Defense",
