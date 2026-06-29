@@ -2589,6 +2589,209 @@
       }
     }
 
+  
+    /* ===== FINAL MOBILE HEADER HERO PREMIUM FIX ===== */
+    @media (max-width:768px){
+      /* Remove the "New York Law Firm" badge completely */
+      .hero-badge{
+        display:none !important;
+      }
+
+      /* Cleaner mobile top emergency bar */
+      .emergency-banner{
+        padding:13px 0 !important;
+        z-index:1002 !important;
+      }
+
+      .emergency-banner-content{
+        justify-content:flex-start !important;
+        gap:13px !important;
+        font-size:14px !important;
+        line-height:1.32 !important;
+      }
+
+      .emergency-banner-content i{
+        font-size:18px !important;
+        flex:0 0 auto !important;
+      }
+
+      /* Premium compact mobile navigation */
+      header{
+        top:70px !important;
+        z-index:1001 !important;
+        background:linear-gradient(180deg, rgba(7,27,58,.98), rgba(5,17,39,.98)) !important;
+        border-bottom:2px solid rgba(200,162,74,.75) !important;
+        box-shadow:0 12px 28px rgba(2,8,23,.22) !important;
+      }
+
+      .navbar{
+        height:76px !important;
+        padding:0 !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        position:relative !important;
+      }
+
+      .logo{
+        position:static !important;
+        transform:none !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        gap:12px !important;
+        max-width:calc(100% - 110px) !important;
+        white-space:nowrap !important;
+        overflow:hidden !important;
+        text-overflow:ellipsis !important;
+        font-size:clamp(18px, 4.8vw, 23px) !important;
+        letter-spacing:.3px !important;
+      }
+
+      .logo i{
+        font-size:30px !important;
+        color:var(--gold) !important;
+        flex:0 0 auto !important;
+      }
+
+      .menu-toggle{
+        display:flex !important;
+        position:absolute !important;
+        right:22px !important;
+        top:50% !important;
+        transform:translateY(-50%) !important;
+        font-size:30px !important;
+        line-height:1 !important;
+        color:#fff !important;
+      }
+
+      .nav-links{
+        top:76px !important;
+      }
+
+      /* Pull hero upward to remove the ugly empty gap under nav */
+      .hero{
+        padding-top:150px !important;
+        min-height:auto !important;
+        padding-bottom:28px !important;
+        background-position:center top !important;
+      }
+
+      .hero .container{
+        width:min(92%, 680px) !important;
+      }
+
+      .hero-content{
+        padding-top:0 !important;
+        max-width:100% !important;
+      }
+
+      .hero h1{
+        margin-top:0 !important;
+        font-size:clamp(39px, 10.5vw, 56px) !important;
+        line-height:.98 !important;
+        margin-bottom:22px !important;
+      }
+
+      .hero p{
+        font-size:17px !important;
+        line-height:1.48 !important;
+        margin-bottom:26px !important;
+      }
+
+      .hero-actions{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:14px !important;
+      }
+
+      .hero-actions .btn{
+        width:100% !important;
+        min-height:58px !important;
+        font-size:16px !important;
+        padding:15px 20px !important;
+      }
+
+      .hero-stats{
+        margin-top:24px !important;
+        display:grid !important;
+        grid-template-columns:repeat(3, minmax(0,1fr)) !important;
+        gap:12px !important;
+      }
+
+      .hero-stat{
+        min-height:104px !important;
+        padding:18px 8px !important;
+        text-align:center !important;
+        border-radius:16px !important;
+      }
+
+      .hero-stat strong{
+        font-size:30px !important;
+        line-height:1 !important;
+        margin-bottom:10px !important;
+      }
+
+      .hero-stat span{
+        font-size:12px !important;
+        line-height:1.25 !important;
+      }
+
+      .trust-badges{
+        margin-top:14px !important;
+        display:grid !important;
+        grid-template-columns:repeat(3, minmax(0,1fr)) !important;
+        gap:10px !important;
+      }
+
+      .trust-badge{
+        min-height:38px !important;
+        padding:8px 6px !important;
+        justify-content:center !important;
+        text-align:center !important;
+        font-size:11px !important;
+        line-height:1.2 !important;
+        border-radius:999px !important;
+      }
+    }
+
+    @media (max-width:430px){
+      header{
+        top:70px !important;
+      }
+
+      .navbar{
+        height:74px !important;
+      }
+
+      .logo{
+        font-size:18px !important;
+        max-width:calc(100% - 104px) !important;
+      }
+
+      .logo i{
+        font-size:28px !important;
+      }
+
+      .menu-toggle{
+        right:20px !important;
+        font-size:29px !important;
+      }
+
+      .nav-links{
+        top:74px !important;
+      }
+
+      .hero{
+        padding-top:146px !important;
+        padding-bottom:24px !important;
+      }
+
+      .hero h1{
+        font-size:clamp(36px, 10vw, 48px) !important;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
