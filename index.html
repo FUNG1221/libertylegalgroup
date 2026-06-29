@@ -2903,7 +2903,35 @@
   }
 }
 
-</style>
+
+    /* ===== FINAL FIX: Mobile menu icon always stays hamburger ===== */
+    .menu-toggle,
+    .menu-toggle.active{
+      transform:none !important;
+      rotate:0deg !important;
+    }
+
+    .menu-toggle i,
+    .menu-toggle.active i{
+      transform:none !important;
+      rotate:0deg !important;
+    }
+
+    .menu-toggle i::before,
+    .menu-toggle.active i::before,
+    .menu-toggle .fa-xmark::before,
+    .menu-toggle .fa-times::before{
+      content:"\f0c9" !important;
+      font-family:"Font Awesome 6 Free" !important;
+      font-weight:900 !important;
+    }
+
+    .menu-toggle .fa-xmark,
+    .menu-toggle .fa-times{
+      font-family:"Font Awesome 6 Free" !important;
+    }
+
+  </style>
 
   <script type="application/ld+json">
   {
@@ -3482,10 +3510,7 @@
     faqItems.forEach(item => {
       item.querySelector(".faq-question").addEventListener("click", () => {
         item.classList.toggle("active");
-        const icon = item.querySelector("i");
-        icon.classList.toggle("fa-plus");
-        icon.classList.toggle("fa-minus");
-      });
+        const icon = item.querySelector("i");      });
     });
 
     // Counter Animation
@@ -3679,5 +3704,28 @@
       successMessage.classList.remove('show');
     }
   </script>
+
+  <script>
+    /* FINAL FIX: Keep mobile menu button as hamburger icon, never X */
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      if (!menuToggle) return;
+
+      function keepHamburgerIcon() {
+        const icon = menuToggle.querySelector("i");
+        if (!icon) return;
+        icon.classList.remove("fa-xmark", "fa-times");
+        icon.classList.add("fa-bars");
+        menuToggle.classList.remove("active");
+      }
+
+      keepHamburgerIcon();
+      menuToggle.addEventListener("click", function () {
+        setTimeout(keepHamburgerIcon, 0);
+        setTimeout(keepHamburgerIcon, 50);
+      });
+    });
+  </script>
+
 </body>
 </html>
