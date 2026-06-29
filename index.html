@@ -1895,6 +1895,212 @@
       }
     }
 
+  
+    /* ========================= */
+    /* Extra Compact Mobile Sections */
+    /* ========================= */
+    @media (max-width: 768px) {
+      /* Keep section content from hiding under fixed header */
+      section {
+        scroll-margin-top: 165px;
+      }
+
+      .section {
+        padding: 26px 0 !important;
+      }
+
+      .section-title {
+        margin-bottom: 18px !important;
+      }
+
+      .section-title span {
+        font-size: 11px !important;
+        letter-spacing: 4px !important;
+      }
+
+      .section-title h2 {
+        font-size: clamp(25px, 7vw, 34px) !important;
+        line-height: 1.04 !important;
+        margin-top: 6px !important;
+      }
+
+      .section-title p {
+        font-size: 13px !important;
+        line-height: 1.38 !important;
+        margin-top: 8px !important;
+      }
+
+      /* Practice cards: compact 2-column layout */
+      .practice-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .practice-card {
+        padding: 16px 14px !important;
+        min-height: 0 !important;
+        border-radius: 18px !important;
+      }
+
+      .practice-card .icon-box {
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 14px !important;
+        font-size: 18px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .practice-card h3 {
+        font-size: 17px !important;
+        line-height: 1.12 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .practice-card p {
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .practice-card .learn-link {
+        font-size: 12px !important;
+      }
+
+      /* Why Choose / Case Results: compact 2-column layout */
+      .choose-grid,
+      .results-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .choose-card,
+      .result-card {
+        padding: 18px 14px !important;
+        min-height: 0 !important;
+        border-radius: 18px !important;
+      }
+
+      .choose-card .number,
+      .result-amount {
+        font-size: 28px !important;
+        line-height: 1 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .choose-card h3,
+      .result-card h3 {
+        font-size: 17px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .choose-card p,
+      .result-card p {
+        font-size: 12.5px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0 !important;
+      }
+
+      /* Testimonials: compact 2-column layout */
+      .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .testimonial-card {
+        padding: 16px 14px !important;
+        min-height: 0 !important;
+        border-radius: 18px !important;
+      }
+
+      .stars {
+        font-size: 13px !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .testimonial-card p {
+        font-size: 12.5px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 12px !important;
+      }
+
+      .client {
+        font-size: 13px !important;
+      }
+
+      /* Attorney section: show more of the profile within one screen */
+      .attorney-grid {
+        gap: 14px !important;
+      }
+
+      .attorney-card {
+        min-height: auto !important;
+      }
+
+      .attorney-card img {
+        height: 250px !important;
+      }
+
+      .attorney-info {
+        padding: 16px !important;
+      }
+
+      .attorney-info h3 {
+        font-size: 20px !important;
+      }
+
+      .position,
+      .attorney-meta {
+        font-size: 12px !important;
+        margin-bottom: 7px !important;
+      }
+
+      .attorney-info p {
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .section {
+        padding: 22px 0 !important;
+      }
+
+      .section-title h2 {
+        font-size: clamp(24px, 7.5vw, 32px) !important;
+      }
+
+      .practice-card,
+      .choose-card,
+      .result-card,
+      .testimonial-card {
+        padding: 14px 12px !important;
+      }
+
+      .practice-card h3,
+      .choose-card h3,
+      .result-card h3 {
+        font-size: 16px !important;
+      }
+
+      .practice-card p,
+      .choose-card p,
+      .result-card p,
+      .testimonial-card p {
+        font-size: 11.5px !important;
+      }
+
+      .choose-card .number,
+      .result-amount {
+        font-size: 25px !important;
+      }
+
+      .attorney-card img {
+        height: 230px !important;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
