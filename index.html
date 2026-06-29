@@ -2339,52 +2339,7 @@
         max-width:210px !important;
       }
     }
-.privacy-consent{
-        display:flex !important;
-        align-items:flex-start !important;
-        gap:8px !important;
-        font-size:13px !important;
-        line-height:1.35 !important;
-        margin:4px 0 16px !important;
-      }
-
-      .privacy-consent input{
-        width:14px !important;
-        height:14px !important;
-        min-width:14px !important;
-        margin-top:3px !important;
-      }
-
-      .privacy-consent label{
-        font-size:13px !important;
-        line-height:1.35 !important;
-      }
-    }
-
-    @media (max-width:430px){
-      .contact-form h3{
-        font-size:30px !important;
-        letter-spacing:-0.5px !important;
-      }
-
-      .privacy-consent{
-        gap:7px !important;
-        font-size:12.5px !important;
-      }
-
-      .privacy-consent label{
-        font-size:12.5px !important;
-      }
-
-      .privacy-consent input{
-        width:13px !important;
-        height:13px !important;
-        min-width:13px !important;
-      }
-    }
-
-  
-    /* ===== FINAL OVERRIDE: Mobile Contact Form Like Screenshot ===== */
+/* ===== FINAL OVERRIDE: Mobile Contact Form Like Screenshot ===== */
     @media (max-width:768px){
       #contact .contact-form{
         padding:34px 28px 36px !important;
@@ -2544,6 +2499,93 @@
       #contact .contact-form h3,
       .contact-form h3{
         font-size:24px !important;
+      }
+    }
+
+  
+    /* ===== FINAL FIX: Privacy checkbox must stay square ===== */
+    @media (max-width:768px){
+      #contact .privacy-consent{
+        display:flex !important;
+        align-items:flex-start !important;
+        gap:10px !important;
+        margin:2px 0 20px !important;
+      }
+
+      #contact .privacy-consent input,
+      #contact .privacy-consent input[type="checkbox"],
+      .privacy-consent input,
+      .privacy-consent input[type="checkbox"]{
+        appearance:none !important;
+        -webkit-appearance:none !important;
+
+        width:18px !important;
+        height:18px !important;
+        min-width:18px !important;
+        max-width:18px !important;
+        min-height:18px !important;
+        max-height:18px !important;
+
+        inline-size:18px !important;
+        block-size:18px !important;
+        min-inline-size:18px !important;
+        max-inline-size:18px !important;
+        min-block-size:18px !important;
+        max-block-size:18px !important;
+
+        flex:0 0 18px !important;
+        aspect-ratio:1 / 1 !important;
+
+        padding:0 !important;
+        margin:3px 0 0 !important;
+
+        border:2px solid #98a2b3 !important;
+        border-radius:4px !important;
+        background:#fff !important;
+        box-sizing:border-box !important;
+
+        line-height:18px !important;
+        display:inline-grid !important;
+        place-items:center !important;
+        vertical-align:top !important;
+      }
+
+      #contact .privacy-consent input[type="checkbox"]:checked,
+      .privacy-consent input[type="checkbox"]:checked{
+        background:var(--gold) !important;
+        border-color:var(--gold) !important;
+      }
+
+      #contact .privacy-consent input[type="checkbox"]:checked::after,
+      .privacy-consent input[type="checkbox"]:checked::after{
+        content:"✓" !important;
+        color:#fff !important;
+        font-size:12px !important;
+        font-weight:800 !important;
+        line-height:1 !important;
+      }
+
+      #contact .privacy-consent label,
+      .privacy-consent label{
+        font-size:13px !important;
+        line-height:1.4 !important;
+      }
+    }
+
+    @media (max-width:430px){
+      #contact .privacy-consent input,
+      #contact .privacy-consent input[type="checkbox"],
+      .privacy-consent input,
+      .privacy-consent input[type="checkbox"]{
+        width:18px !important;
+        height:18px !important;
+        min-width:18px !important;
+        max-width:18px !important;
+        min-height:18px !important;
+        max-height:18px !important;
+        inline-size:18px !important;
+        block-size:18px !important;
+        flex:0 0 18px !important;
       }
     }
 
